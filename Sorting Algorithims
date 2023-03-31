@@ -1,0 +1,28 @@
+# 1. Bubble Sort
+  # - Time Complexity: O(n^2)
+  # - Auxiliary Space: O(1) 
+   
+  # Code
+  def BubbleSort(list_arr):
+    len_is = len(list_arr)-1
+    for i in range(len_is):
+        for j in range(len_is - i):
+            if list_arr[j] > list_arr[j+1]:
+                list_arr[j], list_arr[j+1] = list_arr[j+1], list_arr[j]
+    return list_arr
+    
+# 2. Selection Sort
+  # - Time Complexity: O(n^2)
+  # - Auxiliary Space: O(1) 
+  
+  # Code
+  def SeclectionSort(list_arr):
+    len_is = len(list_arr)
+    for i in range(len_is):
+        min_index = i
+        for j in range(i+1, len_is):
+            if list_arr[min_index] > list_arr[j]:
+                min_index = j
+        list_arr[min_index],list_arr[i] = list_arr[i], list_arr[min_index]
+                
+    return list_arr
